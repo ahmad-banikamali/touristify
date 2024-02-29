@@ -1,0 +1,20 @@
+@font-face {
+    font-family: "yekan";
+    src: url(src/core/assets/fonts/iran_yekan_x_bold.ttf) format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "yekan";
+    src: url(src/core/assets/fonts/iran_yekan_x_regular.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*set font for entire project*/
+@layer base {
+    html {
+        font-family: "yekan", system-ui, sans-serif !important;
+    }
+}
