@@ -1,13 +1,6 @@
 import {RouteComponent, RouteRecordRaw} from "vue-router";
 
-
-const childrenModules: Record<string, RouteRecordRaw> =
-    import.meta.glob('../children/*/view/router/index.ts', {
-        import: 'default',
-        eager: true,
-    })
-
-export default function generateRoute(path: string, component: RouteComponent) {
+export default function generateRoute(path: string, component: RouteComponent,childrenModules: Record<string, RouteRecordRaw>) {
     return {
         path: path,
         component: component,

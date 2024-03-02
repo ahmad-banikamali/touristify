@@ -1,9 +1,8 @@
-import {RouteRecordRaw} from "vue-router";
+import generateRoute from "../../../../../../common/view/router";
 import SecondChild from "../second-child.vue";
 
-const routeRecord: RouteRecordRaw = {
-    path: "second",
-    component: SecondChild,
-}
-export default routeRecord
-
+export default generateRoute("/second", SecondChild,
+    import.meta.glob('../children/*/view/router/index.ts', {
+        import: 'default',
+        eager: true,
+    }))

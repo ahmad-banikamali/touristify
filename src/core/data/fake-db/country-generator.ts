@@ -2,7 +2,7 @@ import {
     Baking,
     Celebrity,
     City,
-    CountryModel,
+    Country,
     Food,
     Image,
     Landmark,
@@ -12,7 +12,7 @@ import {
     Stringy,
     SubTradition,
     Tradition
-} from "./touristify-model.ts";
+} from "../touristify-model.ts";
 
 export default function generateCountryArray(n: number = 50) {
     return Array(n).fill(null).map(function (_,i) {
@@ -22,7 +22,7 @@ export default function generateCountryArray(n: number = 50) {
 }
 
 function generateCountry(i: number) {
-    return <CountryModel>{
+    return <Country>{
         id: generateId(i),
         name: generateName(i),
         capital: generateCity(i),

@@ -7,9 +7,7 @@ const modules: Record<string, RouteRecordRaw> =
         eager: true,
     })
 
-const routes: RouteRecordRaw[] = Object.values(modules).splice(1).map(function (value) {
-    return value
-})
+const routes: RouteRecordRaw[] = Object.values(modules).splice(1)
 
 export default createRouter({
     history: createWebHashHistory(),
